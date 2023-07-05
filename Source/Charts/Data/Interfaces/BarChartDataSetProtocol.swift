@@ -45,4 +45,7 @@ public protocol BarChartDataSetProtocol: BarLineScatterCandleBubbleChartDataSetP
     
     /// the radius used for drawing radius around the bars. If barRadius == 0, no radius will be drawn.
     var barRadius: CGFloat { get set }
+    
+    /// the flag indicating radius will be shown around the bars. If isShowRadius == false, no radius will be drawn.
+    var isShowRadius: Bool { get set }
 }
