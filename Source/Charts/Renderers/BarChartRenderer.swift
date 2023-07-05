@@ -841,7 +841,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
 
         if isShowRadius {
             
-            let cornerRadius: CGFloat = CGRectGetWidth(barRect) <= 5 ? 1.0 : 2.0
+            let cornerRadius: CGFloat = CGRectGetWidth(barRect) <= 5 ? 1.0 : 6.0
             let bezierPath = UIBezierPath(
                 roundedRect: barRect, byRoundingCorners: UIRectCorner.allCorners, cornerRadii: CGSizeMake(cornerRadius, cornerRadius)
             )
