@@ -180,21 +180,6 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         // execute all drawing commands
         drawGridBackground(context: context)
         
-        if xAxis.isEnabled && xAxis.isDrawLimitLinesBehindDataEnabled
-        {
-            xAxisRenderer.renderLimitLines(context: context)
-        }
-        
-        if leftAxis.isEnabled && leftAxis.isDrawLimitLinesBehindDataEnabled
-        {
-            leftYAxisRenderer.renderLimitLines(context: context)
-        }
-        
-        if rightAxis.isEnabled && rightAxis.isDrawLimitLinesBehindDataEnabled
-        {
-            rightYAxisRenderer.renderLimitLines(context: context)
-        }
-        
         if _autoScaleMinMaxEnabled
         {
             autoScale()
@@ -227,6 +212,20 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
             rightYAxisRenderer.renderGridLines(context: context)
         }
         
+        if xAxis.isEnabled && xAxis.isDrawLimitLinesBehindDataEnabled
+        {
+            xAxisRenderer.renderLimitLines(context: context)
+        }
+        
+        if leftAxis.isEnabled && leftAxis.isDrawLimitLinesBehindDataEnabled
+        {
+            leftYAxisRenderer.renderLimitLines(context: context)
+        }
+        
+        if rightAxis.isEnabled && rightAxis.isDrawLimitLinesBehindDataEnabled
+        {
+            rightYAxisRenderer.renderLimitLines(context: context)
+        }
         
         context.saveGState()
 
